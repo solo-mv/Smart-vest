@@ -6,13 +6,13 @@ from twilio.rest import Client
 from TTS import *
 def location():
      TTS("Calculating current location")
-     gmaps = googlemaps.Client(key = "AIzaSyCPZRtcCyMQCua0TguLHrRDGoNQ5C-4R2o")
+     gmaps = googlemaps.Client(key = "key")
      location = gmaps.geolocate()
      coordinates = location['location']['lat'], location['location']['lng']
      print(coordinates)
 
-     account_sid = 'ACe14a8cfbc29993d3558912995289a2dc'
-     auth_token = 'fabd003a6916d22454d97ea5c1598a76'
+     account_sid = 'sid'
+     auth_token = 'token'
      client = Client(account_sid, auth_token)
      #
      message = client.messages.create(
